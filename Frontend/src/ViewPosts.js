@@ -2,7 +2,8 @@ import React, { useEffect,useState } from 'react'
 import axios from 'axios'
 import { Navigate, useNavigate } from 'react-router-dom'
 import "./CSS/allPosts.css"
-
+import post from './images/post.png'
+import Navbar from './Navbar'
 export default function ViewPosts() {
   const [apiData,setApiData]=useState([])
   const [loading, isLoading] = useState(true)
@@ -40,9 +41,10 @@ export default function ViewPosts() {
       });
     }, [apiData]);
     
-    const displayData =apiData.map((data)=>(
+    const displayData = apiData.map((data)=>(
       <div className="postCard" key={data.id}>
       <div className="postContent">
+        <img src={post} className='imagepost'></img>
         <h2 className="postTitle">{data.title}</h2>
         <p className="postDescription">{data.content}</p>
       </div>
@@ -58,11 +60,14 @@ export default function ViewPosts() {
       return <h1>Something went wrong</h1>
     }
   return (
-    <div>
+    <>
+      <Navbar />
+    <div className='mainContainer'>
       <h1>All Posts</h1>
       <div className="postContainer">
         {displayData}
       </div>
     </div>
+    </>
   )
 }

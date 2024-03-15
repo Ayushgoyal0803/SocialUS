@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './CSS/contact.css';
+import Navbar from './Navbar';
 
 function ContactUs() {
     
@@ -51,6 +52,8 @@ function ContactUs() {
     };
 
     return (
+        <>
+        <Navbar />
         <div className="contact-container">
             <h1 className="contact-heading">Contact Us</h1>
             <form onSubmit={handleSubmit}>
@@ -63,7 +66,7 @@ function ContactUs() {
                     onChange={handleName} 
                     className="contact-input"
                     required 
-                />
+                    />
                 
                 <label htmlFor="email" className="contact-label">Email:</label>
                 <input 
@@ -74,7 +77,7 @@ function ContactUs() {
                     onChange={handleEmail} 
                     className="contact-input"
                     required 
-                />
+                    />
                 
                 <label htmlFor="message" className="contact-label">Message:</label>
                 <textarea 
@@ -85,11 +88,12 @@ function ContactUs() {
                     className="contact-textarea"
                     rows="4" 
                     required 
-                />
+                    />
                 
                 <button type="submit" className="contact-submit">Submit</button>
             </form>
         </div>
+        </>
     );
 }
 

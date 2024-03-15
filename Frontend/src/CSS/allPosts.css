@@ -23,12 +23,18 @@ body {
   text-align: center;
 }
 
+.mainContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 /* Container styles */
 .postContainer {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+  width: 100%;
   gap: 20px;
-  padding: 20px;
 }
 
 /* Card styles */
@@ -38,20 +44,30 @@ body {
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   padding: 20px;
   transition: transform 0.3s ease;
+  
 }
 
 .postCard:hover {
   transform: translateY(-5px); /* Adjust the amount of translation as needed */
 }
 
+.imagepost{
+  width: 50%;
+}
+
 .postContent {
   padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .postTitle {
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-bottom: 10px;
+  text-transform: capitalize;
 }
 
 .postDescription {

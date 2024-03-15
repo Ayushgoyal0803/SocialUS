@@ -9,6 +9,7 @@ import ViewPosts from './ViewPosts';
 import Registeration from './Registeration';
 import CreatePost from './CreatePost';
 import ContactUs from './ContactUs';
+import About from './About'
 
 const router = createBrowserRouter([
   {
@@ -43,7 +44,12 @@ const router = createBrowserRouter([
   {
     path : '/contacts',
     element : <ContactUs></ContactUs>
+  },
+  {
+    path : '/about',
+    element : <About></About>
   }
+
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

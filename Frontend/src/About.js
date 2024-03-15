@@ -2,7 +2,9 @@ const About = ()=>{
 
     return (
         <>
-        <h1>hello</h1>
+        <h1>Page Under Construction</h1>
         </>
     )
 }
+
+export default About

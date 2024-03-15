@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useEffect,useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./CSS/createPost.css"
+import Navbar from './Navbar'
 
 export default function CreatePost() {
     const navigate = useNavigate()
@@ -42,6 +43,8 @@ export default function CreatePost() {
     }
 
   return (
+    <>
+    <Navbar />
     <div className="container">
         <h1>Create Post</h1>
         <form onSubmit={handleFormData}>
@@ -51,10 +54,11 @@ export default function CreatePost() {
             </div>
             <div className="inputContainer">
                 <label>Content :</label>
-                <input type='text' className='content' value={content} onChange={handleContent}></input>
+                <textarea type='text' className='content' rows={10} cols={4} value={content} onChange={handleContent}></textarea>
             </div>
         <button type="submit">Submit</button>
         </form>
     </div>
+    </>
     )
 }

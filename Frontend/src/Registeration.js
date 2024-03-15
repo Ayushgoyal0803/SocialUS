@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./CSS/register.css"
+import Navbar from './Navbar'
 
 export default function Registeration() {
     const [UserName ,setUsername]= useState('')
@@ -29,6 +30,8 @@ export default function Registeration() {
         }
       }
   return (
+    <>
+      <Navbar />
     <div className='registerContainer'>
         <h1 className='registerText'>Registeration</h1>
         <form onSubmit = {handleForm}>
@@ -41,5 +44,6 @@ export default function Registeration() {
         <button a href="./login" className='orButton'>Login</button>
       </form>
     </div>
+    </>
   )
 }
