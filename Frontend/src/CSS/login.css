@@ -1,0 +1,71 @@
+.loginContainer {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.loginText {
+  text-align: center;
+}
+
+.loginContainer form {
+  margin-top: 20px;
+}
+
+.loginContainer label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.loginContainer input[type="text"],
+.loginContainer input[type="password"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.loginContainer .submitButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff; /* Blue color */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.loginContainer .submitButton:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.loginContainer .registrationButton {
+  width: 100%;
+  padding: 10px;
+  background-color: #28a745; /* Green color */
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.loginContainer .registrationButton:hover {
+  background-color: #218838; /* Darker green on hover */
+}
+
+.loginContainer h2 {
+  text-align: center;
+}
+
+.loginContainer a {
+  text-decoration: none;
+  color: #007bff;
+  display: block;
+  text-align: center;
+}

@@ -1,0 +1,75 @@
+/* styles.css */
+
+/* Define some colors */
+:root {
+  --primary-color: #007bff; /* Blue */
+  --secondary-color: #6c757d; /* Gray */
+  --accent-color: #28a745; /* Green */
+  --text-color: #333; /* Dark gray */
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa; /* Light gray */
+  color: var(--text-color);
+}
+
+/* Header styles */
+.header {
+  background-color: var(--primary-color);
+  color: #fff; /* White text */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Container styles */
+.postContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Adjust width as needed */
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card styles */
+.postCard {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.postCard:hover {
+  transform: translateY(-5px); /* Adjust the amount of translation as needed */
+}
+
+.postContent {
+  padding: 20px;
+}
+
+.postTitle {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.postDescription {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Button styles */
+.button {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--accent-color);
+}
